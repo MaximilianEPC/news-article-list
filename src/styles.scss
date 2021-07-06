@@ -1,0 +1,48 @@
+$backgroundColor: #DFDFDF;
+$cardColor: #C9C9C9;
+$primaryTextColor: #121212;
+$secondaryTextColor: #454545;
+$primaryFontSize: 24px;
+
+.app {
+  min-height: 100vh;
+  max-width: 100vw;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: $backgroundColor;
+  color: $primaryTextColor;
+  font-size: $primaryFontSize;
+  }
+
+.search {
+  margin: 10px 0px 10px 0px;
+  display: flex;
+  justify-content: center;
+}
+
+.MuiPaper-root {
+  height: 250px;
+  min-width: 300px;
+  max-width: 450px;
+  background-color: $cardColor !important;
+  margin: 10px;
+}
+
+.MuiInputBase-input {
+  width: 400px;
+  height: 25px;
+}
+
+.MuiOutlinedInput-input {
+  padding: 6px;
+}
+
+.MuiButtonBase-root {
+  margin-left: 10px;
+}
+
+.MuiButton-root {
+  color: $primaryTextColor;
+}

@@ -1,10 +1,19 @@
 import { Grid, Card } from "@material-ui/core";
 import Moment from 'react-moment';
+import axios from 'axios';
 
 const Article = ({ article }) => {
+    const onCardClick = () => {
+        axios.post('http://localhost:8080/logOpen',
+        {
+            url: article.url,
+        });
+        window.open(article.url, '_blank');
+    }
+
     return (
         <Grid item xl={4} lg={4} md={4} sm={12} xs={12}>
-            <Card variant="outlined" onClick={() => {window.open(article.url, '_blank')}}>
+            <Card variant="outlined" onClick={onCardClick}>
                 <div className="published">
                     <Moment format="YYYY-MM-DD HH:MM">{article.publishedAt}</Moment>
                 </div>

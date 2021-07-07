@@ -8,8 +8,8 @@ const Article = ({ article }) => {
                 <div className="published">
                     <Moment format="YYYY-MM-DD HH:MM">{article.publishedAt}</Moment>
                 </div>
-                <div>
-                    <img src={article.image} alt="" width="75%" height="75%"/>
+                <div className="image">
+                    <img src={article.image} alt=""/>
                 </div>
                 <p>{article.title}</p>
                 <div className="description">{article.description}</div>

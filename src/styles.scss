@@ -19,7 +19,7 @@ p {
   justify-content: center;
   background-color: $backgroundColor;
   color: $primaryTextColor;
-  }
+}
 
 .search {
   margin: 10px 0px 10px 0px;
@@ -30,12 +30,21 @@ p {
 .description {
   color: $secondaryTextColor;
   font-size: $secondaryFontSize;
+  text-overflow: ellipsis;
 }
 
 .published {
   color: $secondaryTextColor;
   font-size: $secondaryFontSize;
   margin-bottom: 5px;
+}
+
+.image {
+  img {
+    height: 180px;
+    width: 350px;
+    object-fit: cover;
+  }
 }
 
 .MuiPaper-root {
@@ -48,7 +57,7 @@ p {
 }
 
 .MuiInputBase-input {
-  width: 400px;
+  width: 250px;
   height: 25px;
 }
 
@@ -58,8 +67,14 @@ p {
 
 .MuiButtonBase-root {
   margin-left: 10px;
+  margin-right: 20px;
 }
 
 .MuiButton-root {
   color: $primaryTextColor;
+}
+
+.MuiSelect-select {
+  width: 100px;
+  padding: 10px;
 }

@@ -1,5 +1,6 @@
 $backgroundColor: #E8E8E8;
 $cardColor: #DFDFDF;
+$hoverCardColor: #C9C9C9;
 $primaryTextColor: #121212;
 $secondaryTextColor: #454545;
 $primaryFontSize: 20px;
@@ -54,6 +55,9 @@ p {
   background-color: $cardColor !important;
   margin: 10px;
   padding: 10px 15px;
+  &:hover {
+    background-color: $hoverCardColor !important;
+  }
 }
 
 .MuiInputBase-input {

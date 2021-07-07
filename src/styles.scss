@@ -1,8 +1,14 @@
-$backgroundColor: #DFDFDF;
-$cardColor: #C9C9C9;
+$backgroundColor: #E8E8E8;
+$cardColor: #DFDFDF;
 $primaryTextColor: #121212;
 $secondaryTextColor: #454545;
-$primaryFontSize: 24px;
+$primaryFontSize: 20px;
+$secondaryFontSize: 14px;
+
+p {
+  font-size: $primaryFontSize;
+  margin: 5px 0px;
+}
 
 .app {
   min-height: 100vh;
@@ -13,7 +19,6 @@ $primaryFontSize: 24px;
   justify-content: center;
   background-color: $backgroundColor;
   color: $primaryTextColor;
-  font-size: $primaryFontSize;
   }
 
 .search {
@@ -22,12 +27,24 @@ $primaryFontSize: 24px;
   justify-content: center;
 }
 
+.description {
+  color: $secondaryTextColor;
+  font-size: $secondaryFontSize;
+}
+
+.published {
+  color: $secondaryTextColor;
+  font-size: $secondaryFontSize;
+  margin-bottom: 5px;
+}
+
 .MuiPaper-root {
-  height: 250px;
-  min-width: 300px;
+  height: 325px;
+  min-width: 280px;
   max-width: 450px;
   background-color: $cardColor !important;
   margin: 10px;
+  padding: 10px 15px;
 }
 
 .MuiInputBase-input {

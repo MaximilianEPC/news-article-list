@@ -15,7 +15,17 @@ app.post('/logOpen', (req, res) => {
     }
     fs.writeFile(`logs/${dateFormat(new Date(), 'yyyymmdd')}_log.log`, `${logMessage}\n`, { flag: 'a' }, err => {});
     console.log(logMessage);
-    res.status(200).send();
+    res.status(204).send();
+})
+
+app.post('/logSearch', (req, res) => {
+    const logMessage = `[${dateFormat(new Date(), 'yyyy-mm-dd HH:MM:ss')}] '${req.body.query}' was searched.`;
+    if(!fs.existsSync('logs')) {
+        fs.mkdirSync('logs');
+    }
+    fs.writeFile(`logs/${dateFormat(new Date(), 'yyyymmdd')}_log.log`, `${logMessage}\n`, { flag: 'a' }, err => {});
+    console.log(logMessage);
+    res.status(204).send();
 })
 
 app.listen(port, () => {

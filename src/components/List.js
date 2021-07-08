@@ -26,7 +26,13 @@ const List = () => {
     };
 
     const onSearch = (data) => {
-        console.log(data.query);
+        axios.get(`https://gnews.io/api/v4/search?token=c5b16b07c5ad0b2e0c4eef840251d008&q=${data.query}&max=9&lang=${language}`)
+            .then((response) => {
+                setArticles(response.data.articles)
+            });
+        axios.post('http://localhost:8080/logSearch', {
+            query: data.query,
+        });
     };
 
     return (
@@ -46,7 +52,7 @@ const List = () => {
                                 "query",
                                 {
                                     required: true,
-                                    maxLength: 10,
+                                    maxLength: 40,
                                     pattern: /^[a-zA-Z0-9 ]*$/i
                                 })
                             }

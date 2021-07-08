@@ -48,7 +48,12 @@ p {
   }
 }
 
-.MuiPaper-root {
+.select {
+  width: 150px;
+  height: 300px;
+}
+
+.MuiCard-root {
   height: 325px;
   min-width: 280px;
   max-width: 450px;

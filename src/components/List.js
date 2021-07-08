@@ -30,7 +30,8 @@ const List = () => {
                 <Select
                     variant="outlined"
                     value={language}
-                    onChange={onLanguageChange}>
+                    onChange={onLanguageChange}
+                    MenuProps={{ PaperProps: { className: 'select' } }}>
                     {languages.map(language => 
                         <MenuItem key={language.value} value={language.value}>{language.label}</MenuItem>    
                     )}

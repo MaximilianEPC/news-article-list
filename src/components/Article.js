@@ -19,7 +19,7 @@ const Article = ({ article }) => {
             <Card variant="outlined" onClick={onCardClick}>
                 <div className="published">
                     {`${article.source.name} - `}
-                    <Moment format="YYYY-MM-DD HH:MM">{article.publishedAt}</Moment>
+                    <Moment format="YYYY-MM-DD HH:mm">{article.publishedAt}</Moment>
                 </div>
                 <div className="image">
                     <img src={article.image} alt=""/>

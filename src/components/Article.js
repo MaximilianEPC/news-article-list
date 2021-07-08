@@ -1,4 +1,5 @@
 import { Grid, Card } from "@material-ui/core";
+import TextTruncate from "react-text-truncate";
 import Moment from 'react-moment';
 import axios from 'axios';
 
@@ -24,7 +25,12 @@ const Article = ({ article }) => {
                     <img src={article.image} alt=""/>
                 </div>
                 <p>{article.title}</p>
-                <div className="description">{article.description}</div>
+                <TextTruncate
+                    className="description"
+                    line={2}
+                    truncateText="..."
+                    text={article.description}
+                />
             </Card>
         </Grid>
     );

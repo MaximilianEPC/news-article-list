@@ -3,7 +3,6 @@ import { useEffect, useState } from "react";
 import { useForm } from "react-hook-form";
 import axios from "axios";
 import Article from "./Article";
-import { articleList } from './DemoData'; // Demo data added to avoid hitting the request limit.
 import languages from './Languages';
 
 const List = () => {
@@ -14,11 +13,10 @@ const List = () => {
     const [searchInput, setSearchInput] = useState('');
 
     useEffect(() => {
-        // axios.get(`https://gnews.io/api/v4/top-headlines?token=c5b16b07c5ad0b2e0c4eef840251d008&max=9&lang=${language}`)
-        //     .then((response) => {
-        //         setArticles(response.data.articles)
-        //     });
-        setArticles(articleList);
+        axios.get(`https://gnews.io/api/v4/top-headlines?token=c5b16b07c5ad0b2e0c4eef840251d008&max=9&lang=${language}`)
+            .then((response) => {
+                setArticles(response.data.articles)
+            });
     }, [language]);
 
     const onLanguageChange = (e) => {

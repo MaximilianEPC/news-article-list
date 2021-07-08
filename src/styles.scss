@@ -23,9 +23,22 @@ p {
 }
 
 .search {
+  .helper-text {
+    text-align: center;
+    font-size: $secondaryFontSize;
+  }
+  .fields {
+    display: flex;
+    justify-content: center;
+    form {
+      display: flex;
+      justify-content: center;
+    }
+  }
   margin: 10px 0px 10px 0px;
   display: flex;
   justify-content: center;
+  flex-direction: column;
 }
 
 .description {
